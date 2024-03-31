@@ -5,7 +5,7 @@ A simple port scanner that utilizes the python nmap library.
 Clone the repository.
 
 ```bash
-git clone [URL](https://github.com/TDBarnhouse/Port-Scanner)
+git clone https://github.com/TDBarnhouse/Port-Scanner
 ```
 
 Use the package manager pip to install python-nmap.
