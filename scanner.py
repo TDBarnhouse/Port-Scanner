@@ -1,10 +1,18 @@
+# Test target: 45.33.32.156 - http://scanme.nmap.org/
+
 import nmap
 import time
+import sys
 
 nm = nmap.PortScanner()
 
-target = "45.33.32.156"  # http://scanme.nmap.org/
 options = "-sV -sC scan_results"
+
+if len(sys.argv) != 2:
+    print("Usage: python3 scanner.py <target>")
+    sys.exit(1)
+
+target = sys.argv[1]
 
 start_time = time.time()
 
