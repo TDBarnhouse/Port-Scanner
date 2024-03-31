@@ -1,13 +1,24 @@
 import nmap
+import time
 
 nm = nmap.PortScanner()
 
-target = "45.33.32.156" # http://scanme.nmap.org/
+target = "45.33.32.156"  # http://scanme.nmap.org/
 options = "-sV -sC scan_results"
+
+start_time = time.time()
 
 print("Scanning target %s..." % target)
 nm.scan(target, arguments=options)
-print("Scan complete.\n")
+
+if not nm.all_hosts():
+    print("Scan failed: No results found.")
+    exit()
+
+end_time = time.time()
+elapsed_time = end_time - start_time
+
+print("Scan completed in %.2f seconds.\n" % elapsed_time)
 
 for host in nm.all_hosts():
     print("Host: %s (%s)" % (host, nm[host].hostname()))
