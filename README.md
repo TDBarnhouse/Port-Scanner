@@ -1,5 +1,5 @@
 # Port Scanner
-A simple port scanner that utilizes the python nmap library.
+A simple port scanner that utilizes the Python Nmap library.
 
 # Installation
 Clone the repository.
