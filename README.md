@@ -15,7 +15,7 @@ pip install python-nmap
 ```
 
 # Usage
-To run the program, open a terminal at the cloned repository folder and run the following: 
+To run the program, open a terminal at the cloned repository directory and run the following: 
 
 ```bash
 python3 scanner.py <target>
